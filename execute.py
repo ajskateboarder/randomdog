@@ -12,7 +12,7 @@ def execute():
     sha = json.loads(requests.get(f'https://api.github.com/repos/{slugpath}/contents/README.md').text)['sha']
 
     readme = open('./README.md', 'r', encoding='utf-8').read()
-    content = readme.replace('{{fact}}', f'[🐕 Random dog!]({dog})')
+    content = readme.replace('{{fact}}', f'[🐕 Random dog!]({dog})', 1)
 
     repo = g.get_repo(slugpath, lazy=False)
     repo.delete_file(path='README.md', message=f'Auto-update README.md ({datetime.date.today().strftime("%B %d, %Y")})', branch='main', sha=sha)
