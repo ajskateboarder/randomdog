@@ -18,4 +18,5 @@ Then go to Developer settings, and create a personal access token.
 In addition to your token, you need an existing repo with a `README.md` file in it.
 Use the slugpath (ex: torvalds/linux)
 
-And throw both of these things into the `config.json` file. After that, open up a console window and type `python auto.py`
+Throw both of these things into the `config.json` file. After that, open up a console window and type `python auto.py`.
+This script executes the randomdog function every day. Why not more often? Probably to avoid rate-limiting.
